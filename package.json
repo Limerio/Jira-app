@@ -1,0 +1,43 @@
+{
+  "name": "jira-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Limerio",
+  "description": "Jira management Application",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "electron": "^19.0.2",
+    "eslint": "^8.24.0",
+    "prettier": "^2.7.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./icons/jira.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "options": {
+              "iconUrl": "./icons/jira.ico",
+              "setupIcon": "./icons/jira.ico"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

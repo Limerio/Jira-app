@@ -1,0 +1,6 @@
+out
+.env
+yarn.lock
+node_modules
+jira-app
+.env.js
